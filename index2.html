@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santhiya | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,hwb(296 27% 10%),#ed3a82,#9333ea);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.profile-pic{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.btn-container{
+    margin-top:25px;
+}
+
+.btn{
+    text-decoration:none;
+    background:white;
+    color:#4f46e5;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    margin:10px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+section{
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#e5468e;
+}
+
+/* About */
+.about{
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Skills */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:white;
+    padding:12px 20px;
+    border-radius:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card h3{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+/* Contact */
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+button{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Dark Mode */
+.dark{
+    background:#111827;
+    color:white;
+}
+
+.dark .project-card,
+.dark .skill{
+    background:#1f2937;
+    color:white;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .profile-pic{
+        width:140px;
+        height:140px;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero -->
+<header class="hero">
+
+<img src="san.jpg" alt="Profile" class="profile-pic">
+
+<h1>Santhiya</h1>
+
+<p>
+Aspiring Cloud Engineer | ECE Student |
+Web Developer
+</p>
+
+<div class="btn-container">
+<a href="#" class="btn">Download Resume</a>
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<br>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+</header>
+
+<!-- About -->
+<section>
+
+<h2>About Me</h2>
+
+<div class="about">
+I am an Electronics and Communication Engineering student
+passionate about Cloud Computing, AWS, Web Development,
+Cybersecurity, and Software Development.
+
+I enjoy building projects and continuously learning new
+technologies to improve my technical skills.
+</div>
+
+</section>
+
+<!-- Skills -->
+<section>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Node.js</div>
+<div class="skill">Express.js</div>
+<div class="skill">MongoDB</div>
+<div class="skill">AWS</div>
+<div class="skill">Cloud Computing</div>
+<div class="skill">Cybersecurity</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+<section>
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Advanced To-Do App</h3>
+<p>
+Task management application with add,
+delete and complete functionality.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>
+Personal portfolio built using HTML,
+CSS, JavaScript, Node.js and MongoDB.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Deepfake Detector</h3>
+<p>
+To Detect Deepfake AI videos Using Convolutional Nueral Networks
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+<textarea
+rows="5"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Santhiya | All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+function toggleDarkMode(){
+    document.body.classList.toggle("dark");
+}
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    alert("Thank you! Your message has been submitted.");
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
